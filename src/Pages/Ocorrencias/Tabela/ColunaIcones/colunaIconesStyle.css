@@ -1,0 +1,39 @@
+#icone {
+  width: 50px;
+  height: 30px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#icone::before, #icone::after {
+  --scale: 0;
+  position: absolute;
+  transform: scale(var(--scale));
+  transition: 100ms transform;
+}
+
+#icone::after {
+  content: attr(data-toolTipText);
+  top: -30px;
+  height: 25px;
+  background-color: #fff;
+  border: 2px solid #3385C3;
+  font-weight: bold;
+  color: #1669AC;
+  text-align: center;
+  width: 140px;
+  border-radius: 10px;
+}
+
+#icone::before {
+  content: "";
+  top: -7px;
+  border: 10px solid transparent;
+  border-top-color: #3385C3;
+}
+
+#icone:hover::after, #icone:hover::before {
+  --scale: 1;
+}

@@ -1,15 +1,3 @@
-#tableSection {
-  justify-content: center;
-  position: relative;
-  width: 90%;
-  height: 72vh;
-  margin: auto;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
-}
-
-
 /* Filtros */
 #filtros {
   width: 95%;
@@ -60,6 +48,11 @@
   border-radius: 12px;
   cursor: pointer;
 }
+.form-select:focus {
+  border-color: #064A80;
+}
+
+
 /* Filtro de quantidade a ser mostrada na tabela */
 #containnerMostre {
   display: flex;
@@ -93,8 +86,23 @@
   width: 98%;
   table-layout:fixed;
   border-collapse: collapse;
-  overflow: hidden;
+  position: relative;
 }
+#seguraTabela {
+  width: 99.8%;
+  height: 548.5px;
+  overflow-y: scroll;
+  padding-left: 8px;
+}
+#seguraTabela::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f3f3f3;
+}
+#seguraTabela::-webkit-scrollbar-thumb {
+  width: 4px;
+  background-color: #064A80;
+}
+
 th {
   background-color: #1669AC;
   font-weight: 600;
@@ -103,6 +111,26 @@ th {
   letter-spacing: 1px;
   color: #fff;
   padding-left: 20px;
+  position: sticky;
+  top: 0;
+}
+
+/* Medidas de algumas colunas */
+.Tempo {
+  width: 7%;
+}
+.Andar {
+  width: 7%;
+}
+.Unidade {
+  min-width: 8%;
+  width: 25%;
+}
+.Data {
+  width: 7%;;
+}
+.Acoes {
+  width: 6%;
 }
 
 td {
@@ -111,7 +139,7 @@ td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   height: 51.5px;
   font-weight: 500;
-  overflow: hidden;
+  overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -120,6 +148,7 @@ tr:hover {
 }
 /* Alinhar elementos de colunas centralizados. */
 .centralizar {
+  overflow: visible;
   text-align: center;
   padding: 0; 
 }
@@ -156,4 +185,35 @@ tr:hover {
 }
 .maisDetalhes:hover {
   text-decoration: underline;
+}
+
+
+/* Style da pagination */
+#pagination {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+}
+.pagination > li > a {
+  color: #1669AC;
+}
+
+.pagination > li > .active {
+  background-color: #1669AC;
+  color: #fff;
+  cursor: default;
+}
+.disabledPag {
+  background-color: #f3f3f3;
+  color: #b4b4b4 !important;
+  cursor: default;
+}
+.disabledPag:hover {
+  background-color: #f3f3f3;
+}
+.holder {
+  user-select: none;
+}
+.holder:hover {
+  background-color: #fff;
 }

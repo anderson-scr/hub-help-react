@@ -7,7 +7,7 @@ function header() {
     <>
       <header id="header">
         <div id="menuEsquerda">
-          <h1 id="titulo">Minha Dashboard</h1>
+          <h2 id="titulo">Minha Dashboard</h2>
         </div>
 
         <BsBell id='sininho'/>

@@ -1,0 +1,21 @@
+#cardsSection {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#tableSection {
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 72vh;
+  margin: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-bottom: 1%;
+}
+
