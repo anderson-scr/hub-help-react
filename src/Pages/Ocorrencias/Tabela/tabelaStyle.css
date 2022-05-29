@@ -1,0 +1,159 @@
+#tableSection {
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  height: 72vh;
+  margin: auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+
+/* Filtros */
+#filtros {
+  width: 95%;
+  margin: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 70px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+#pesquisaTabela {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 260px;
+  height: 32px;
+  border-radius: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+#inputPesquisaTabela {
+  width: 88%;
+  margin: 0;
+  display: inline-block;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+}
+#btnPesquisaTabela {
+  width: 18px;
+  height: 18px;
+  color: #1669AC;
+}
+#filtrosContainner {
+  display: flex;
+  width: calc(100% - 200px);
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 30px;
+}
+.form-select {
+  height: 30px;
+  width: 160px;
+  padding: 0;
+  padding-left: 10px;
+  margin: 0;
+  font-size: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+/* Filtro de quantidade a ser mostrada na tabela */
+#containnerMostre {
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);;
+  padding-left: 10px;
+  align-items: center;
+  gap: 10px;
+}
+#containnerMostre > p {
+  margin: 0;
+}
+#mostreQuantidade {
+  width: 70px;
+}
+
+/* Limpar filtros */
+#limparFiltros {
+  margin: 0;
+  margin-bottom: 2.5px;
+  cursor: pointer;
+  color: #064A80;
+}
+#limparFiltros:hover {
+  text-decoration: underline;
+}
+
+/* Tabela */
+#tabela {
+  margin: auto;
+  width: 98%;
+  table-layout:fixed;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+th {
+  background-color: #1669AC;
+  font-weight: 600;
+  font-size: 16px;
+  height: 33px;
+  letter-spacing: 1px;
+  color: #fff;
+  padding-left: 20px;
+}
+
+td {
+  padding-left: 22px;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 51.5px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+tr:hover {
+  background-color: #f7f7f7;
+}
+/* Alinhar elementos de colunas centralizados. */
+.centralizar {
+  text-align: center;
+  padding: 0; 
+}
+.bolda {
+  font-weight: 600;
+}
+
+/* Cores da situacao na tabela */
+.azul {
+  background-color: #3385C3;
+}
+.vermelho {
+  background-color: #E9250B;
+}
+.verde {
+  background-color: #35BD05;
+}
+.amarelo {
+  background-color: #DAAE14;
+}
+.fazerBackground {
+  border-radius: 13px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+
+/* Coluna mais detalhes */
+.maisDetalhes {
+  color: #064A80;
+  font-weight: 700;
+  cursor: pointer;
+}
+.maisDetalhes:hover {
+  text-decoration: underline;
+}

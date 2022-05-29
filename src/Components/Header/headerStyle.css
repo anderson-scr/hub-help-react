@@ -1,0 +1,23 @@
+#header {
+  height: 77px;
+  width: 100%;
+  background-color: #FFFEFE;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5% 0 5%;
+}
+#menuEsquerda {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+h1 {
+  margin: 0;
+}
+#sininho {
+  width: 20px;
+  height: 20px;
+}
