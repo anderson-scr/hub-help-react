@@ -5,15 +5,14 @@ import { ReactComponent as LogoHubHelp } from "../../Assets/Svgs/hub-help-logo-b
 import Login from "./Login/login";
 
 
-function LoginMain({ verificarLogin }) {
+function LoginMain() {
 
   return (
     <div className='background'>
-
       <header className='topo'>
         <div className="logo">
           <LogoHubHelp id='logo_HubHelp'/>
-          <h1>HUB HELP</h1>
+          <h1 className='nomeLogo'>HUB HELP</h1>
         </div>
         <div className="grid-covid">
           <div className="covid"></div>
@@ -22,7 +21,7 @@ function LoginMain({ verificarLogin }) {
           <div className="covid meio"></div>
         </div>
       </header>
-
+      
       <main className='mainLogin'>
         <div className="opcoes-login">
           <button className="botao" id="login" data-op-atual >LOGIN</button>
@@ -30,7 +29,7 @@ function LoginMain({ verificarLogin }) {
         </div>
 
         <div div className='meio'>
-          <Login logar={ verificarLogin }/>
+          <Login />
         </div>
 
         <div className="img-container">
