@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
@@ -7,13 +8,23 @@ import Header from "../Components/Header/header";
 import Footer from "../Components/Footer/footer";
 import Ocorrencias from "../Pages/Ocorrencias/ocorrencias";
 import Relatorios from "../Pages/Relatorios/relatorios";
+import LoginMain from "../Pages/Login/loginMain";
 
 function App() {
+  const [login, setLogin] = useState(false);
+
+  const verificarLogin = () => {setLogin(true)}
+
+  if(!login) {
+    return (
+      <LoginMain verificarLogin={verificarLogin} />
+    )
+  }
 
   return (
     <Router>
       <div className="App">
-        <BarraLateral />
+        <BarraLateral logout={verificarLogin}/>
 
         <section id="conteudo">
           <Header />

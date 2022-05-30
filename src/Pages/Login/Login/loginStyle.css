@@ -1,0 +1,59 @@
+.meio > form {
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.meio > form.form-login {
+	margin-top: auto;
+	height:fit-content;
+}
+
+.meio > form.form-pequeno {
+	justify-content: center;
+	gap: 1.5em;
+}
+
+.meio > form > input {
+	width: 80%;
+	height: 3em;
+	
+	border: 1px solid #c4c4c4;
+	border-radius: 1.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+	outline: none;
+}
+
+.meio > form input:focus {
+	border: 1px solid #064A80;
+}
+
+.submit-button {	
+	width: 15em;
+	padding-left: 0;
+	border-radius: 0.8em;
+	/* 	font-size: 1rem; */
+	font-weight: 700;
+	color: #fff;
+	background-color: hsl(207, 91%, 26%);
+	
+	cursor: pointer;
+}
+
+#esqueci-senha {
+	margin-top: 0.875em;
+	margin-bottom: auto;
+	border: none;
+	
+	color: #064A80;
+	background-color: #fff;
+	
+	cursor: pointer;
+}
+
+#esqueci-senha:hover {
+	text-decoration: underline;
+}

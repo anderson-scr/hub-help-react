@@ -45,10 +45,10 @@ function BarraLateral() {
         </nav>
       </section>
 
-      <a href="" className="opcao" id="logout">
+      <NavLink to="/Login" className="opcao" id="logout">
         <BsBoxArrowLeft className='icone' />
         Logout
-      </a>
+      </NavLink>
       <section id="blocosInferiores">
         <div className="covid"></div>
         <div className="covid covidMeio"></div>
