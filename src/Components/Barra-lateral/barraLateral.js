@@ -1,16 +1,24 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './barraLateralStyle.css';
+import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { ReactComponent as LogoHubHelp } from "../../Assets/Svgs/hub-help-logo-branca.svg";
 import { BsReverseLayoutTextSidebarReverse, BsJournalText, BsBoxArrowLeft } from "react-icons/bs";
 
 
 function BarraLateral() {
   const [posicao, setPosicao] = useState();
-  const indicadorSelecionado = useRef(null)
+  const indicadorSelecionado = useRef(null);
+  const ocorrencias = useRef(null);
+  const relatorios = useRef(null);
+  const localizacao = useLocation();
 
-  const moverIndicador = (evt) => {
-    evt.preventDefault();
-    setPosicao(evt.currentTarget.offsetTop)
+  useEffect(() => {
+    moverIndicador()
+  }, [localizacao]);
+
+  const moverIndicador = () => {
+    localizacao.pathname === "/Ocorrencias"? setPosicao(ocorrencias.current["offsetTop"]) : setPosicao(relatorios.current["offsetTop"])
   }
 
   return (
@@ -26,14 +34,14 @@ function BarraLateral() {
         <LogoHubHelp id="logoHubHelp"/>
         <nav id="navegacao">
           <div id='selecionado' ref={indicadorSelecionado} style={{top: posicao}}></div>
-          <a href="" className="opcao" id="ocorrencias" onClick={evt => {moverIndicador(evt)}}>
+          <NavLink to="/Ocorrencias" className="opcao" id="ocorrencias" ref={ocorrencias}>
             <BsReverseLayoutTextSidebarReverse className='icone' />
             Ocorrencias
-          </a>
-          <a href="" className="opcao" id="relatorios" onClick={evt => {moverIndicador(evt)}}>
+          </NavLink>
+          <NavLink to="/Relatorios" className="opcao" id="relatorios" ref={relatorios}>
             <BsJournalText className='icone' />
             Relatorios
-          </a>
+          </NavLink>
         </nav>
       </section>
 

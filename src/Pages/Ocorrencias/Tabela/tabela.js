@@ -140,7 +140,6 @@ function Tabela() {
                   <th {...column.getHeaderProps(column.getSortByToggleProps())} className={`${centralizarHeader(column["Header"])} ${column["Header"]}`}>
                     {column.render('Header')}
                     <span> {column.isSorted? (column.isSortedDesc? <BsChevronDown /> : <BsChevronUp />) : ''} </span>
-                    {column["Header"] === "Tempo"? console.log(column["maxWidth"]) : console.log(`nao e a tempo`)}
                   </th>
                 ))}
               </tr>
