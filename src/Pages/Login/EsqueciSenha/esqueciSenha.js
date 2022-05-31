@@ -8,8 +8,8 @@ function EsqueciSenha() {
 
       <p id='pEsqueciSenha'>Para redefinir sua senha, informe o email cadastrado na sua conta.</p>
       <div className='form' id='enviarSenha'>
-        <input type="text" name="email" id="email-envio" placeholder="DIGITE SEU E-MAIL" maxlength="50" />
-        <button type="submit" class="submit-button" id="enviar-email">Enviar</button>
+        <input type="text" name="email" id="email-envio" placeholder="DIGITE SEU E-MAIL" maxLength="50" />
+        <button type="submit" className="submit-button" id="enviar-email">Enviar</button>
       </div>
     </div>
   )

@@ -1,0 +1,10 @@
+.App {
+  height: inherit;
+  display: flex;
+}
+#conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}

@@ -38,11 +38,15 @@
 	color: #fff;
 	background-color: hsl(207, 91%, 26%);	
 	cursor: pointer;
+  line-height: 2.6em;
+  text-align: center;
+  text-decoration: none;
   border: none;
   outline: none;
 }
 .submit-button:hover {
 	background-color: hsl(207, 90%, 31%);	
+	color: #fff;
 }
 
 #esqueci-senha {
