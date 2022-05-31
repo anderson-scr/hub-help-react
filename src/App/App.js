@@ -1,28 +1,31 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router,  Routes, Route } from 'react-router-dom';
 
 // Componentes
-import Layout from "../Router/layout";
 import LoginMain from "../Pages/Login/loginMain";
 import Ocorrencias from "../Pages/Ocorrencias/ocorrencias";
 import Relatorios from "../Pages/Relatorios/relatorios";
 import BarraLateral from "../Components/Barra-lateral/barraLateral";
-// import Header from "../../Components/Header/header";
-// import Footer from "../../Components/Footer/footer";
+import Login from "../Pages/Login/Login/login";
+import CriarConta from "../Pages/Login/CriarConta/criarConta";
+import EsqueciSenha from "../Pages/Login/EsqueciSenha/esqueciSenha";
+
 
 function App() {
-
   return (
-    <Routes>
-        {/* Login publico */}
-        <Route path='/Login' element={<LoginMain />} />
-        
-        <Route path='/' element={<Layout />}>
-          <BarraLateral />
-          <Route path='Ocorrencias' element={<Ocorrencias />} />
-          <Route path='Relatorios' element={<Relatorios />} />
+    <Router>
+      <Routes>
+        <Route path='/' element={<LoginMain />} >
+            <Route path='/' element={<Login />} />
+            <Route path='CriarConta' element={<CriarConta />} />
+            <Route path='EsqueciSenha' element={<EsqueciSenha />} />
         </Route>
-    </Routes>
+        <Route path='/HubHelp'>
+          <Route path="Ocorrencias" element={<BarraLateral />} />
+          <Route path="Relatorios" element={<Relatorios />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

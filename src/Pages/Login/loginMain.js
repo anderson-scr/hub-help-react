@@ -1,9 +1,8 @@
 import React from 'react';
 import "./loginMainStyle.css";
 import logo_senac from "../../Assets/Imgs/senac_hub.png";
+import { Outlet, NavLink } from 'react-router-dom';
 import { ReactComponent as LogoHubHelp } from "../../Assets/Svgs/hub-help-logo-branca.svg";
-import Login from "./Login/login";
-
 
 function LoginMain() {
 
@@ -22,20 +21,22 @@ function LoginMain() {
         </div>
       </header>
       
-      <main className='mainLogin'>
-        <div className="opcoes-login">
-          <button className="botao" id="login" data-op-atual >LOGIN</button>
-          <button className="botao" id="criar-conta">CRIAR CONTA</button>
-        </div>
+      <div className='seguraMainLogin'>
+        <main className='mainLogin'>
+          <div className="opcoes-login">
+            <NavLink to="/" className="botao" id="login" >LOGIN</NavLink>
+            <NavLink to="/CriarConta" className="botao" id="criar-conta">CRIAR CONTA</NavLink>
+          </div>
 
-        <div div className='meio'>
-          <Login />
-        </div>
+          <div className='meio'>
+            <Outlet />
+          </div>
 
-        <div className="img-container">
-          <img src={logo_senac} alt="Senac Hub Academy logo" />
-        </div>
-      </main>
+          <div className="img-container">
+            <img src={logo_senac} alt="Senac Hub Academy logo" />
+          </div>
+        </main>
+      </div>
       
       <footer className='rodaPe'>
         <div className="grid-covid">
@@ -45,7 +46,7 @@ function LoginMain() {
           </div>
 
           <div className='base'>
-            <div className="covid brabo"></div>
+            <div className="brabo covid"></div>
           </div>
 
           <div className='base'>

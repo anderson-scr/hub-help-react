@@ -1,22 +1,18 @@
 import React from 'react';
 import "./loginStyle.css";
+import { Link } from 'react-router-dom';
 
-function Login({ logar }) {
-  
-  function entrar(evt) {
-    evt.preventDefault()
-    logar()
-  }
+function Login() {
 
   return (
     <>
-      <form action="#" className="form-login form-pequeno">
+      <div className="form-login form-pequeno form">
         <input type="text" name="matricula" id="matricula" placeholder="NÚMERO DA MATRÍCULA" maxLength="8" />
         <input type="password" name="senha" id="senha" placeholder="SENHA" maxLength="16" />
 
-        <input type="submit" className="submit-button" value="LOGIN" id="login" onClick={evt => entrar(evt)}/>
-      </form>
-      <button id="esqueci-senha">Esqueci minha senha</button>
+        <button type="submit" className="submit-button" id="login"> Login </button>
+      </div>
+      <Link to="/EsqueciSenha" id="esqueci-senha">Esqueci minha senha</Link>
     </>
   )
 }

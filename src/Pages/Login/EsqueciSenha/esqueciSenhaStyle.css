@@ -1,0 +1,21 @@
+#esqueciSenha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#esqueciSenha > p {
+  width: 80%;
+  text-align: center;
+  margin-top: 2%;
+}
+#enviarSenha {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4%;
+}
+#enviar-email {
+  margin-top: 12%;
+  margin-bottom: 4%;
+}

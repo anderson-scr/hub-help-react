@@ -3,7 +3,7 @@
   height: inherit;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -14,14 +14,20 @@
   display: flex;
   justify-content: center;
   position: relative;
+  height: 10%;
 }
 .logo {
+  position: absolute;
   display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  flex-direction: column;
+  align-items: center;
+  top: 3rem;
 }
-
+#logo_HubHelp {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
 .nomeLogo {
 	font-family: 'Press Start 2P', cursive;
 	font-size: 2.8rem;
@@ -40,8 +46,10 @@
 }
 /* Parte de cima */
 
+
 /* Parte de baixo */
 .rodaPe {
+  height: 10%;
   overflow: visible;
   width: 100%;
   overflow: visible;
@@ -49,21 +57,22 @@
 .rodaPe > .grid-covid {
   overflow: visible;
   height: 100%;
-  width: 300px;
+  width: 240px;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
 }
 /* Parte de baixo */
 
+
 /* Covids */
 .grid-covid .covid {
-  min-width: 100px;
+  min-width: 80px;
   background-color: #52799B;
-  min-height: 100px;
+  min-height: 80px;
 }
 .topo > .grid-covid > .meio {
-  margin-right: 100px;
+  margin-right: 80px;
 }
 .base {
   display: flex;
@@ -71,36 +80,37 @@
   justify-content: space-between;
 }
 .brabo {
-  width: 200px;
+  width: 160px !important;
 }
 .incomoda {
   align-self: flex-start;
 }
 .incomoda2 {
-  margin-right: 100px;
+  margin-right: 80px;
 }
 /* Covids */
 
 
 
-#logo_HubHelp {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
+.seguraMainLogin {
+  width: 100%;
+  height: 40%;
+  position: relative;
 }
-
 .mainLogin {
-	margin: auto 0;
-  overflow: hidden;
 	width: 22.5%;
 	min-height: 45%;
 	border: 2px solid #fff;
 	border-radius: 20px;
-	align-self: center;
 	display: flex;
 	flex-direction: column;
 	background-color: #fff;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .opcoes-login {
@@ -118,17 +128,20 @@
 	font-size: 1.125rem;
 	font-weight: 500;
 	color:white;
-	background-color: #064A80;
-}
-
-#login {
+  text-align: center;
+  line-height: 3rem;
+  text-decoration: none ;
+  background-color: #064A80;
+  border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+
 }
 
 /* https://css-tricks.com/a-complete-guide-to-data-attributes/ */
-.opcoes-login > [data-op-atual] {
+.opcoes-login .active {
 	color:#064A80;
 	background-color: white;
+  cursor: default;
 }
 
 .img-container {
@@ -142,7 +155,7 @@
   width: 110px;
 }
 .mainLogin > .meio {
-  margin-top: 20px;
+  margin-top: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
