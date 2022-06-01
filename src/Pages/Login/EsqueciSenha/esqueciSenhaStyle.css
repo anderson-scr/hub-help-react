@@ -8,6 +8,10 @@
   text-align: center;
   margin-top: 2%;
 }
+#tEsqueciSenha {
+  color: #064A80;
+  margin-bottom: 10px;
+}
 #enviarSenha {
   width: 100%;
   display: flex;

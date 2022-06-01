@@ -11,10 +11,10 @@ function Header() {
       <header id="header">
         <div id="menuEsquerda">
           <h2 id="titulo">{
-            localizacao.pathname === "/Ocorrencias"? "Ocorrências" : "Relatorios"
+            localizacao.pathname === "/HubHelp/Ocorrencias"? "Ocorrências" : "Relatorios"
           }</h2>
         </div>
-
+        {console.log(localizacao.pathname)}
         <BsBell id='sininho'/>
       </header>
     </>

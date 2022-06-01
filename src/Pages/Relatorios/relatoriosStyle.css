@@ -58,14 +58,7 @@
 .containnerDropDowns {
   border-bottom: 2px solid #ececec;
 }
-.calendario {
-  border: 4px solid #064A80 !important;
-  border-radius: 10px;
-  width: 350px;
-}
-.react-calendar__navigation {
+.containnerDatas {
   display: flex;
-}
-.react-calendar__month-view__days__day--weekend {
-  background-color: red;
+  justify-content: space-around;
 }

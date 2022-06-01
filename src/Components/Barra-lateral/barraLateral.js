@@ -46,7 +46,7 @@ function BarraLateral() {
         </nav>
       </section>
 
-      <Link to="/Login" className="opcao" id="logout">
+      <Link to="/" className="opcao" id="logout">
         <BsBoxArrowLeft className='icone' />
         Logout
       </Link>

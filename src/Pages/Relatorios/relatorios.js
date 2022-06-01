@@ -2,7 +2,6 @@ import React from 'react';
 import "./relatoriosStyle.css";
 import SelectDropDown from "../../Helpers/gerarDropdown";
 import { opcoesRelatorios } from "../../Helpers/dropsDowns";
-import Calendar from 'react-calendar';
 
 function Relatorios() {
   const exemploAndarUnidade = [
@@ -43,7 +42,15 @@ function Relatorios() {
           </div>
         </div>
         <div className='containnerDatas'>
-          <Calendar minDate={new Date()} locale="pt-BR" className="calendario"/>
+          <div>
+            <label for="dataInicial" className='labelDataFinal'>Data inicial: </label>
+            <input name='dataInicial' type="date" className='inputDataFinal'></input>
+          </div>
+          
+          <div>
+            <label for="dataFinal" className='labelDataFinal'>Data final:</label>
+            <input name='dataFinal' type="date" className='inputDataFinal'></input>
+          </div>
         </div>
         <button>Gerar</button>
       </div>

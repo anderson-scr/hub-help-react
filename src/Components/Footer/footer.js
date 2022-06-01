@@ -1,5 +1,5 @@
 import React from "react";
-import logo_senac from "../../Assets/Imgs/senac_hub.png";
+import logo_senac from "../../Assets/Imgs/logo_reta.png";
 import "./footerStyle.css";
 
 function header() {
